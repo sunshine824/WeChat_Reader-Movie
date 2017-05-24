@@ -75,4 +75,8 @@
 ### 更多注意事项请查看[小程序注意事项](https://zhuanlan.zhihu.com/oldtimes)
 
 ### 新增功能 分享 扫二维码
-
+ ![](https://github.com/sunshine824/WeChat_Reader-Movie/blob/master/static/IMG_0137.PNG)
+ ![](https://github.com/sunshine824/WeChat_Reader-Movie/blob/master/static/IMG_0138.PNG)
+ ![](https://github.com/sunshine824/WeChat_Reader-Movie/blob/master/static/IMG_0139.PNG)
+ ![](https://github.com/sunshine824/WeChat_Reader-Movie/blob/master/static/IMG_0140.PNG)
+ ![](https://github.com/sunshine824/WeChat_Reader-Movie/blob/master/static/IMG_0141.PNG)
