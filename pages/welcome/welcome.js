@@ -11,5 +11,23 @@ Page({
     wx.switchTab({
        url: '../posts/post', //拥有tabbar页面才可以跳转
     });
+  },
+  
+  //二维码扫描
+  scanQRCode:function(){
+    wx.scanCode({
+      success: function (result) {
+        wx.showModal(
+          {
+            content: JSON.stringify(result)
+          })
+      },
+      fail: function (error) {
+        wx.showModal(
+          {
+            content: JSON.stringify(error)
+          })
+      }
+    })
   }
 })

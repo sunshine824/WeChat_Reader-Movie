@@ -46,7 +46,7 @@ Page({
       },
       method: 'GET',
       success: function (res) {
-        console.log(res)
+        //console.log(res)
         _this.processDoubanData(res.data, settedKey, subjectTitle)
       },
       fail: function () {

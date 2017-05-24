@@ -160,5 +160,19 @@ Page({
         isPlayingMusic:true,
       })
     }
+  },
+  //转发
+  onShareAppMessage: function (event) {
+    return {
+      title: this.data.title,
+      path: '/pages/posts/post-detail/post-detail?id=' + this.data.postId,
+      success: function (res) {
+        console.log(res)
+        wx.getShareInfo()
+      },
+      fail: function () {
+        console.log("分享失败")
+      }
+    }
   }
 })
