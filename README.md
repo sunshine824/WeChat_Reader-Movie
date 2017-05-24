@@ -4,7 +4,8 @@
 运行项目
 -----------------------------------  
   下载微信web开发者工具，clone项目到本地，用微信web开发者打开项目，模拟器上（编译或CTRL+S）查看项目</br>
-  最后模拟器上效果如下：
+  最后模拟器上效果如下：</br>
+  ![](https://github.com/sunshine824/WeChat_Reader-Movie/blob/master/static/jdfw.gif)
   
 ### 注意!!!下面所有语法的提示我都先用小标题提醒了!!!   
   
