@@ -1,0 +1,16 @@
+<import src="movie-list/movie-list-template.wxml" />
+<import src="movie-grid/movie-grid-template.wxml" />
+<view class="search">
+  <icon type="search" class="search-img" size="13" color="#405f80" />
+  <input type="text" placeholder="变形金刚、速度与激情8" placeholder-class="placeholder" bindfocus="onBindFocus" bindblur="onBindBlur" value="{{value}}"/>
+  <image src="/images/icon/xx.png" bindtap="onCancelImgTap" class="xx-img" wx:if="{{searchPanelShow}}"></image>
+</view>
+<view class="container" wx:if="{{containerShow}}">
+  <template is="movieListTemplate" data="{{...inTheaters}}"></template>
+  <template is="movieListTemplate" data="{{...comingSoon}}"></template>
+  <template is="movieListTemplate" data="{{...top250}}"></template>
+</view>
+
+<view class="search-panel" wx:if="{{searchPanelShow}}">
+  <template is="movieGridTemplate" data="{{...searchResult}}"></template>
+</view>
