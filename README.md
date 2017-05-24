@@ -3,14 +3,15 @@
    
 运行项目
 -----------------------------------  
-  下载微信web开发者工具，clone项目到本地，用微信web开发者打开项目，模拟器上（编译或CTRL+S）查看项目</br>
-  最后模拟器上效果如下：</br>
+ ### 下载微信web开发者工具，clone项目到本地，用微信web开发者打开项目，模拟器上（编译或CTRL+S）查看项目
+      git clone https://github.com/superman66/vue2.x-douban.git
+ ### 最后模拟器上效果如下：
   ![](https://github.com/sunshine824/WeChat_Reader-Movie/blob/master/static/jdfw.gif)
   
 ### 注意!!!下面所有语法的提示我都先用小标题提醒了!!!   
   
 ### 单行文本框  
-    这是一个单行的文本框,只要两个Tab再输入文字即可 
+      这是一个单行的文本框,只要两个Tab再输入文字即可 
           
 ### 多行文本框    
     这是一个有多行的文本框  
