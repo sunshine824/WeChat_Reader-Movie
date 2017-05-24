@@ -3,59 +3,75 @@
    
 运行项目
 -----------------------------------  
-  下载微信web开发者工具，clone项目到本地，用微信web开发者打开项目，模拟器上（编译或CTRL+S）查看项目</br>
-  最后模拟器上效果如下：
-  
-### 注意!!!下面所有语法的提示我都先用小标题提醒了!!!   
+ #### 下载微信web开发者工具，clone项目到本地，用微信web开发者打开项目，模拟器上（编译或CTRL+S）查看项目
+      git clone https://github.com/sunshine824/WeChat_Reader-Movie.git
+ #### 最后模拟器上效果如下：
+  ![](https://github.com/sunshine824/WeChat_Reader-Movie/blob/master/static/jdfw.gif)
   
-### 单行文本框  
-    这是一个单行的文本框,只要两个Tab再输入文字即可 
-          
-### 多行文本框    
-    这是一个有多行的文本框  
-    你可以写入代码等,每行文字只要输入两个Tab再输入文字即可  
-    这里你可以输入一段代码  
-  
-### 比如我们可以在多行文本框里输入一段代码,来一个Java版本的HelloWorld吧  
-    public class HelloWorld {  
-  
-      /**  
-      * @param args  
-   */  
-   public static void main(String[] args) {  
-   System.out.println("HelloWorld!");  
-  
-   }  
-  
-    }  
-### 链接  
-1.[点击这里你可以链接到www.google.com](http://www.google.com)<br />  
-2.[点击这里我你可以链接到我的博客](http://guoyunsky.iteye.com)<br />  
-  
-###只是显示图片  
-![github](http://github.com/unicorn.png "github")  
-  
-###想点击某个图片进入一个网页,比如我想点击github的icorn然后再进入www.github.com  
-[![image]](http://www.github.com/)  
-[image]: http://github.com/github.png "github"  
-  
-### 文字被些字符包围  
-> 文字被些字符包围  
->  
-> 只要再文字前面加上>空格即可  
->  
-> 如果你要换行的话,新起一行,输入>空格即可,后面不接文字  
-> 但> 只能放在行首才有效  
-  
-### 文字被些字符包围,多重包围  
-> 文字被些字符包围开始  
->  
-> > 只要再文字前面加上>空格即可  
->  
->  > > 如果你要换行的话,新起一行,输入>空格即可,后面不接文字  
->  
-> > > > 但> 只能放在行首才有效  
-  
-### 特殊字符处理  
-有一些特殊字符如<,#等,只要在特殊字符前面加上转义字符\即可<br />  
-你想换行的话其实可以直接用html标签\<br /\> 
+ 项目结构
+-----------------------------------
+```javascript
+.
+├── README.md
+├── data                                    // 自定义data数据
+├── images                                  //静态图片文件夹
+├── pages
+│   ├── movies                              //电影模块
+│   │   ├── more-movie                      //更多电影页面
+│   │   │   └── more-movie.js
+│   │   │   └── more-movie.json             //more-movie配置文件
+│   │   │   └── more-movie.wxml
+│   │   │   └── more-movie.wxss
+│   │   ├── movie                           //单个电影组件
+│   │   ├── movie-grid                      //所有电影整合的组件
+│   │   ├── more-list                       //单个分类电影列表
+│   │   ├── movie-detail                    //电影详情
+│   │   ├── stars                           //评分组件
+│   │   ├── movies.js                       //电影模块脚本
+│   │   ├── movies.json
+│   │   ├── movies.wxml 
+│   │   └── movies.wxss
+│   ├── posts                              //文章模块
+│   │   ├── post-detail                    //文章详情组件
+│   │   ├── post-item                      //单个文章组件
+│   │   ├── post.js 
+│   │   ├── post.json  
+│   │   ├── post.wxml 
+│   │   └── post.wxss
+│   ├── welcome                           //欢迎入口文件
+│   │   ├── welcome.js 
+│   │   ├── welcome.json  
+│   │   ├── welcome.wxml 
+│   │   └── welcome.wxss
+├── untils                               //公共方法模块
+├── └── untils.js
+├── app.js
+├── app.json                            //公共配置文件
+├── app.wxss                            //公共样式表
+└── static
+```
+
+ 注意事项
+-----------------------------------
+      1.如何设置纵向轮播:vertical="{{true}}"
+
+      2.如何阻止事件冒泡:catch+事件
+
+      3.wx.navigateTo 是平行跳转，由主页面跳到子页面 跳转后会触发 onHide
+        wx.redirectTo 是平级跳转 跳转后会触发 onUnload 
+
+      4.如果页面使用了tabBar组件，只能使用wx.switchTab实现跳转，wx.navigateTo、wx.redirectTo则不行
+
+      5.为什么会出现“脚本错误或者未正确调用Page()”的错误提示？
+       *出现这个错误的原因通常是因为对应页面的js文件里，没有调用Page方法。即使js文件里没有任何代码，也需要在js里添加一个空的 Page({})。注意Page的P要大写。
+
+      6.为什么会出现“Expecting ‘String，‘Number，‘NULL，‘True....’”’’的错误提示？
+       *出现这个错误的原因在于对应页面的json文件没有加入{ }。即使json文件里没有任何内容，也需要加入一个{ }，作为默认代码。json文件不允许出现注释代码，如果有注释的代码，同样会报这个错误。
+
+      7.为什么 出现“ Failed to load image http://2110932784.debug.open.weixin.qq.com/pages/posts/images/post/crab.png : the server responded with a status of 404 (HTTP/1.1 404 Not Found) From server 127.0.0.1”
+       *出现类似的这种错误，通常是由于图片的路径不对而引起的。外网的图片，我们这里不再说了，因为没有相对和绝对的路径概念，如果报错了就是你外网的图片url错了。我们说说本地的图片路径问题。请注意，如果图片路径被写在一个js文件A里，而B引用了这个js文件，那么图片的路径必须是相对于B的相对路径。所以，最好在公共的js文件里使用绝对路径。
+       还有一点，提醒大家，小程序对资源文件，比如图片是有缓存的，这个大家要注意。
+
+### 更多注意事项请查看[小程序注意事项](https://zhuanlan.zhihu.com/oldtimes)
+
+### 后续会增加分享功能，扫一扫，点赞
