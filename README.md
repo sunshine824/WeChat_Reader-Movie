@@ -10,6 +10,46 @@
   
  项目结构
 -----------------------------------
+```javascript
+.
+├── README.md
+├── data                                    // 自定义data数据
+├── images                                  //静态图片文件夹
+├── pages
+│   ├── movies                              //电影模块
+│   │   ├── more-movie                      //更多电影页面
+│   │   │   └── more-movie.js
+│   │   │   └── more-movie.json             //more-movie配置文件
+│   │   │   └── more-movie.wxml
+│   │   │   └── more-movie.wxss
+│   │   ├── movie                           //单个电影组件
+│   │   ├── movie-grid                      //所有电影整合的组件
+│   │   ├── more-list                       //单个分类电影列表
+│   │   ├── movie-detail                    //电影详情
+│   │   ├── stars                           //评分组件
+│   │   ├── movies.js                       //电影模块脚本
+│   │   ├── movies.json
+│   │   ├── movies.wxml 
+│   │   └── movies.wxss
+│   ├── posts                              //文章模块
+│   │   ├── post-detail                    //文章详情组件
+│   │   ├── post-item                      //单个文章组件
+│   │   ├── post.js 
+│   │   ├── post.json  
+│   │   ├── post.wxml 
+│   │   └── post.wxss
+│   ├── welcome                           //欢迎入口文件
+│   │   ├── welcome.js 
+│   │   ├── welcome.json  
+│   │   ├── welcome.wxml 
+│   │   └── welcome.wxss
+├── untils                               //公共方法模块
+├── └── untils.js
+├── app.js
+├── app.json                            //公共配置文件
+├── app.wxss                            //公共样式表
+└── static
+```
 
  注意事项
 -----------------------------------
